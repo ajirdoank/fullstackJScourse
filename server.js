@@ -10,7 +10,9 @@ const server = express();
 server.set('view engine', 'ejs'); //magic syntax to use EJS engine in view engine
 
 server.get('/', (req, res) => { 
-    res.render('index.ejs');
+    res.render('index.ejs',{
+        content:'hello react!'
+    });
 });
 
 server.use('/api', apiRouter);
